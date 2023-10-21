@@ -7,31 +7,57 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-
-<div class="container mx-auto mt-4">
-    <h1 class="text-3xl font-bold mb-4">Tienda</h1>
-
-    <!-- Lista de Productos -->
-    <div class="grid grid-cols-3 gap-4">
-        <div class="p-4 border">
-            <h2 class="text-xl font-semibold">Producto 1</h2>
-            <p>Descripción del Producto 1</p>
-            <p>Precio: $10.00</p>
-            <button class="bg-blue-500 text-white px-4 py-2 mt-2">Agregar al Carrito</button>
+    <!--Banner-->
+<header> 
+    <div class="relative rounded-lg overflow-hidden">
+        <img src="_Banner.png" alt="Imagen 1" class="w-full h-auto">
+        <div class="absolute inset-0 text-white opacity-100 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <h1 class="text-6xl font-sans">Bienvenido a FullCart</h1>
         </div>
-        <!-- Aquí puedes agregar más productos de manera similar -->
+</header>
+    <!-- Lista de Productos -->
+     <!-- CONTENIDO CENTRAL -->
+<div id="central" class="flex flex-wrap justify-center">
+    <!-- Producto 1 -->
+    <div class="product flex flex-col items-center m-4">
+        <img src="Pineapple-Soda-1.png" alt="Golder" class="w-52 h-52 rounded-lg">
+        <h2>Camiseta Azul Ancha</h2>
+        <p>30 Euros</p>
+        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
     </div>
-
-    <!-- Carrito de Compra -->
-    <div class="mt-4">
-        <h2 class="text-2xl font-semibold">Carrito de Compra</h2>
-        <ul id="carrito" class="mt-2">
-            <!-- Los elementos del carrito se agregarán aquí -->
-        </ul>
-        <button id="realizarOrden" class="bg-green-500 text-white px-4 py-2 mt-2">Realizar Orden</button>
+    <!-- Producto 2 -->
+    <div class="product flex flex-col items-center m-4">
+        <img src="Pineapple-Soda-1.png" alt="Golder" class="w-52 h-52 rounded-lg">
+        <h2>Camiseta Azul Ancha</h2>
+        <p>30 Euros</p>
+        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
+    </div>
+    <!-- Producto 3 -->
+    <div class="product flex flex-col items-center m-4">
+        <img src="Pineapple-Soda-1.png" alt="Golder" class="w-52 h-52 rounded-lg">
+        <h2>Camiseta Azul Ancha</h2>
+        <p>30 Euros</p>
+        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
     </div>
 </div>
-
+<body class="flex flex-col min-h-screen">
+    <!-- Contenedor principal -->
+    <div class="flex-1 flex flex-col justify-center items-center">
+        <!-- Carrito de Compra -->
+        <div class="product flex flex-col items-center m-9">
+            <h2 class="text-2xl font-semibold mb-2">Carrito de Compra</h2>
+            <ul id="carrito" class="mt-2">
+                <!-- Los elementos del carrito se agregarán aquí -->
+            </ul>
+            <button id="realizarOrden" class="bg-green-500 text-white px-4 py-2 mt-2">Realizar Orden</button>
+        </div>
+        <!-- Pie de Página -->
+        <footer id="footer" class="mt-4">
+            <p>Desarrollador por Fer &copy; <?= date('Y') ?></p>
+        </footer>
+    </div>
+    <!-- Script de JavaScript -->
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>

@@ -1,47 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda en Línea</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <!--Banner-->
-<header> 
-    <div class="relative rounded-lg overflow-hidden">
-        <img src="_Banner.png" alt="Imagen 1" class="w-full h-auto">
-        <div class="absolute inset-0 text-white opacity-100 flex items-center justify-center">
-            <div class="absolute inset-0 bg-black opacity-30"></div>
-            <h1 class="text-6xl font-sans">Bienvenido a FullCart</h1>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Banner -->
+    <header> 
+        <div class= "relative rounded-lg overflow-hidden">
+            <img src="_Banner.png" alt="Imagen 1" class= "w-100 h-100">
+            <div class="absolute inset-0 text-white opacity-100 flex items-center justify-center">
+            </div>
+        </header>    
+    <!-- Pestañas -->
+    <div class="flex justify-center my-8">
+        <a href="#mujeres-content" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l">Mujeres</a>
+        <a href="#hombres-content" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-r">Hombres</a>
+    </div>
+
+    <div class="flex justify-center mb-8">
+        <a href="#mujeres-content" class="tab-link mujeres-tab"></a>
+        <a href="#hombres-content" class="tab-link hombres-tab"></a>
+    </div>
+    
+    <div id="mujeres-content" class="clothing-section" style="border-color: #63b3ed; background-color: #a0d8ef;">
+        <!-- Contenido para ropa de mujeres -->
+    </div>
+    
+    <div id="hombres-content" class="clothing-section" style="border-color: #ff7e67; background-color: #ffb8a8; display: none;">
+        <!-- Contenido para ropa de hombres -->
+        
+        <div class="product flex flex-col items-center m-4">
+            <img src="azul.webp" alt="Golder" class="w-25 h-52 rounded-lg">
+            <h2>Camiseta Azul Ancha</h2>
+            <p>$40.89</p>
+            <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded"  onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
         </div>
-</header>
-    <!-- Lista de Productos -->
-     <!-- CONTENIDO CENTRAL -->
-<div id="central" class="flex flex-wrap justify-center">
+    </div>
+    
+</head>
+<body class="bg-gray-100 p-4">
+
+
+ <!-- CONTENIDO CENTRAL -->
+<div class="flex justify-center mt-8">
     <!-- Producto 1 -->
     <div class="product flex flex-col items-center m-4">
-        <img src="Pineapple-Soda-1.png" alt="Golder" class="w-52 h-52 rounded-lg">
+        <img src="azul.webp" alt="Golder" class="w-25 h-52 rounded-lg">
         <h2>Camiseta Azul Ancha</h2>
-        <p>30 Euros</p>
-        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
-    </div>
+        <p>$50.0</p>
+        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded"  onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
+    </div>    
+    
     <!-- Producto 2 -->
     <div class="product flex flex-col items-center m-4">
-        <img src="Pineapple-Soda-1.png" alt="Golder" class="w-52 h-52 rounded-lg">
-        <h2>Camiseta Azul Ancha</h2>
-        <p>30 Euros</p>
+        <img src="Pajama Set.jpeg" alt="Golder" class="w-25 h-52 rounded-lg">
+        <h2>Pajama</h2>
+        <p>$50.0</p>
         <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
     </div>
+    
     <!-- Producto 3 -->
     <div class="product flex flex-col items-center m-4">
-        <img src="Pineapple-Soda-1.png" alt="Golder" class="w-52 h-52 rounded-lg">
-        <h2>Camiseta Azul Ancha</h2>
-        <p>30 Euros</p>
+        <img src="Steampunk Dress.jpeg" alt="Golder" class="w-25 h-52 rounded-lg">
+        <h2>Dress</h2>
+        <p>$50.0</p>
+        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="product flex flex-col items-center m-4">
+        <img src="Traje de vestir.jpg" alt="Golder" class="w-25 h-52 rounded-lg">
+        <h2>Traje de Vestir</h2>
+        <p>$50.0</p>
         <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" onclick="addToCart('Chronos', 500)">Añadir al carrito 🛒</button>
     </div>
 </div>
-<body class="flex flex-col min-h-screen">
+
+
+    <!-- Producto 5 -->
+    <div class="product flex flex-col items-center m-4">
+        <!-- Contenido del producto 5 -->
+    </div>
+</div>
+<!-- Carrito de Compra -->
+<<body class="flex flex-col min-h-screen">
     <!-- Contenedor principal -->
     <div class="flex-1 flex flex-col justify-center items-center">
         <!-- Carrito de Compra -->
@@ -51,7 +97,7 @@
                 <!-- Los elementos del carrito se agregarán aquí -->
             </ul>
             <button id="realizarOrden" class="bg-green-500 text-white px-4 py-2 mt-2">Realizar Orden</button>
-        </div>
+
         <!-- Pie de Página -->
         <footer id="footer" class="mt-4">
             <p>Desarrollador por Fer &copy; <?= date('Y') ?></p>
@@ -60,4 +106,13 @@
     <!-- Script de JavaScript -->
     <script src="main.js"></script>
 </body>
+</html>
+
+
+
+
+    <!-- Script de JavaScript -->
+    <script src="main.js"></script>
+</body>
+
 </html>
